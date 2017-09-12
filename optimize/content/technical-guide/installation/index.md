@@ -10,33 +10,33 @@ menu:
 
 ---
 
-# Installation guide
+# Installation Guide
 
-This document describes the installation process of the Camunda Optimize distribution, as well as various configuration possibilities available after the initial installation. 
+This document describes the installation process of the Camunda Optimize distribution, as well as various configuration possibilities available after initial installation. 
 
 Before proceeding with the installation, please read the article about [supported environments]({{< relref "introduction/supported-environments.md" >}}).
 
-## Full distribution 
+## Full Distribution 
 
-To install the full distribution, please download the archive with the latest version from the [Camunda Nexus repository](https://app.camunda.com/nexus/content/repositories/camunda-optimize/org/camunda/optimize/camunda-optimize/) and extract it to the desired folder. After that, start Optimize by running the script `start-optimize.sh` on Linux or `start-optimize.bat` on Windows. 
+To install the full distribution, please download the archive with the latest version from the [download page](/enterprise/download/#camunda-optimize) and extract it to the desired folder. After that, start Optimize by running the script `start-optimize.sh` on Linux or `start-optimize.bat` on Windows. 
 
-## Standalone application 
+## Standalone Application 
 
-You can [download](https://app.camunda.com/nexus/content/repositories/camunda-optimize/org/camunda/optimize/optimize-backend/) the fat jar, which contains all the required files to startup Camunda Optimize, and configure it to connect to your pre-installed Elasticsearch instance. You can then start your instance by running the script `start-optimize.sh` on Linux or `start-optimize.bat` on Windows.
+You can [download](https://app.camunda.com/nexus/content/repositories/camunda-optimize/org/camunda/optimize/optimize-backend/) the fat jar, which contains all the required files to startup Optimize, and configure it to connect to your pre-installed Elasticsearch instance. You can then start your instance by running the script `start-optimize.sh` on Linux or `start-optimize.bat` on Windows.
 
 ## Usage
 
-You can start using Camunda Optimize right away by opening the following URL in your browser: [http://localhost:8090](http://localhost:8090)
+You can start using Optimize right away by opening the following URL in your browser: [http://localhost:8090](http://localhost:8090)
 
-Please note that, in order to utilize all features of the platform, you have to configure integration with the Camunda BPM Platform and perform an import of the data. Please refer to the [import dataset](#import-of-the-dataset) section for more instructions.
+Please note that, in order to utilize all features of Optimize, you have to configure integration with the Camunda BPM Platform and perform an import of the data. Please refer to the [import dataset](#import-of-the-dataset) section for more instructions.
 
 ## Configuration
 
-All distributions of Camunda Optimize come with a predefined set of configuration options that can be overwritten by the user, based on current environment requirements. To do that, have a look into the folder named `environment`. There are two files called `environment.properties` with values that override the default optimize properties and `environment-logback.xml`, which sets the logging configuration.
+All distributions of Optimize come with a predefined set of configuration options that can be overwritten by the user, based on current environment requirements. To do that, have a look into the folder named `environment`. There are two files, one called `environment.properties` with values that override the default Optimize properties and another called `environment-logback.xml`, which sets the logging configuration.
 
 You can see all supported values [here]({{< relref "technical-guide/configuration/index.md" >}}).
 
-### Optimize container configuration
+### Optimize Container Configuration
 
 * camunda.optimize.container.port - A port number that is used by the embedded jetty server to process HTTP connections 
 ```
@@ -50,11 +50,11 @@ Default value: `0.0.0.0`
 
 ### Elasticsearch configuration
 
-The Camunda Optimize distribution comes with an Elasticsearch instance. The supplied Elasticsearch server is not customized or tuned by Camunda in any manner. 
+The Optimize distribution comes with an Elasticsearch instance. The supplied Elasticsearch server is not customized or tuned by Camunda in any manner. 
 
 #### Configuration values 
 
-You can customize connection properties used by Camunda Optimize by changing the following properties:
+You can customize connection properties used by Optimize by changing the following properties:
 
 * camunda.optimize.es.host - A hostname on which the Elasticsearch TCP listener is available 
 ```
@@ -66,18 +66,18 @@ Default value: `localhost`
 Default value: `9300`
 ```
 
-* camunda.optimize.es.index - An index name used to create all Camunda Optimize types, shards, etc. 
+* camunda.optimize.es.index - An index name used to create all Optimize types, shards, etc. 
 ```
 Default value: `optimize`
 ```
 
 #### Additional considerations 
 
-Camunda Optimize will create a default user on initial startup of the application, with the username\password pair `admin\admin`. It might be a good idea to remove this user if you plan to use the system in a productive environment.
+Optimize will create a default user on initial startup of the application, with the username\password pair `admin\admin`. It might be a good idea to remove this user if you plan to use the system in a productive environment.
 
 ### Camunda BPM configuration
 
-To perform an import and provide the full set of features, Camunda Optimize requires connection to the REST API of the Camunda Engine, which can be configured using the following properties. 
+To perform an import and provide the full set of features, Optimize requires connection to the REST API of the Camunda Engine, which can be configured using the following properties. 
 
 * camunda.optimize.engine.rest - A base URL that will be used for connections to the Camunda Engine REST API
 ```
@@ -103,14 +103,14 @@ Default value: `info`
 
 Possible options are: trace, debug, info, warn, error, all or off.
 
-Or you can change the log level of specific package. E.g.,:
+Alternatively, you can change the log level of specific package. E.g.,:
 ```xml
 <logger name="org.camunda.optimize" level="warn" />
 ```
 
 ## Import of the dataset
 
-By default, Camunda Optimize comes without any data available. To start using all the features of the system, you have to perform a data import from the Camunda BPM Platform. This process is triggered automatically on start.
+By default, Optimize comes without any data available. To start using all the features of the system, you have to perform a data import from the Camunda BPM Platform. This process is triggered automatically on start.
 
 If you are interested in the details of the import, please refer to the dedicated section [Import Overview]({{< relref "technical-guide/import/import-overview.md" >}}).
 
