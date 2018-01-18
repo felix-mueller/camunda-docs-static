@@ -34,6 +34,9 @@ downloads:
     - path: "wildfly10"
       name: "WildFly 10"
       weight: 8
+    - path: "wildfly11"
+      name: "WildFly 11"
+      weight: 9
 
   formats:
     - zip
@@ -46,12 +49,19 @@ downloads:
     server: "tomcat"
 
   branches:
+  - branch: "7.9"
+    releases:
+    - number: "7.9.0-alpha1"
+      note: "https://blog.camunda.org/post/2018/01/camunda-bpm-790-alpha1-released/"
+      date: "2018.01.31"
+  
   - branch: "7.8"
     releases:
     - number: "7.8.0"
       note: "http://blog.camunda.org/post/2017/11/camunda-bpm-780-released/"
       date: "2017.11.30"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
 
   - branch: "7.7"
@@ -60,36 +70,42 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=15090"
       date: "2017.12.07"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
 
     - number: "7.7.4"
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14990"
       date: "2017.09.27"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
 
     - number: "7.7.3"
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14910"
       date: "2017.08.09"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
 
     - number: "7.7.2"
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14908"
       date: "2017.07.26"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
 
     - number: "7.7.1"
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14896"
       date: "2017.07.13"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
 
     - number: "7.7.0"
       note: "http://blog.camunda.org/post/2017/05/camunda-bpm-770-released/"
       date: "2017.05.31"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
 
   - branch: "7.6"
@@ -98,6 +114,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=15108"
       date: "2018.01.15"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -105,6 +122,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=15100"
       date: "2017.12.06"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -112,6 +130,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14909"
       date: "2017.10.26"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -119,6 +138,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14899"
       date: "2017.07.13"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -126,6 +146,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14897"
       date: "2017.06.30"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -133,6 +154,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14891"
       date: "2017.05.22"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -140,6 +162,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14890"
       date: "2017.03.28"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -147,6 +170,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14703"
       date: "2017.03.15"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -154,6 +178,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14700"
       date: "2017.01.18"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -161,6 +186,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14698"
       date: "2016.12.15"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -168,6 +194,7 @@ downloads:
       note: "http://blog.camunda.org/post/2016/11/camunda-bpm-760-released/"
       date: "2016.11.25"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -177,6 +204,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14704"
       date: "2017.12.06"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -184,6 +212,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14701"
       date: "2017.01.24"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -191,6 +220,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14696"
       date: "2016.12.15"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -198,6 +228,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14694"
       date: "2016.10.26"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -205,6 +236,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14606"
       date: "2016.08.10"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -212,6 +244,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14604"
       date: "2016.07.08"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -219,6 +252,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14600"
       date: "2016.06.23"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -226,6 +260,7 @@ downloads:
       note: "https://app.camunda.com/jira/secure/ReleaseNote.jspa?projectId=10230&version=14599"
       date: "2016.05.31"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -233,6 +268,7 @@ downloads:
       note: "http://blog.camunda.org/post/2016/05/camunda-bpm-750-released/"
       date: "2016.05.31"
       excludeservers:
+      - "wildfly11"
       - "glassfish"
       - "ibm-was9"
 
@@ -244,6 +280,7 @@ downloads:
       date: "2016.12.15"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.4.10"
@@ -251,6 +288,7 @@ downloads:
       date: "2016.10.26"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.4.8"
@@ -258,6 +296,7 @@ downloads:
       date: "2016.06.23"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.4.7"
@@ -265,6 +304,7 @@ downloads:
       date: "2016.06.13"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.4.6"
@@ -272,6 +312,7 @@ downloads:
       date: "2016.04.29"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.4.5"
@@ -279,6 +320,7 @@ downloads:
       date: "2016.03.18"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.4.4"
@@ -286,6 +328,7 @@ downloads:
       date: "2016.03.10"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.4.3"
@@ -293,6 +336,7 @@ downloads:
       date: "2016.03.01"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.4.2"
@@ -300,6 +344,7 @@ downloads:
       date: "2016.01.28"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.4.1"
@@ -307,6 +352,7 @@ downloads:
       date: "2015.12.15"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.4.0"
@@ -314,6 +360,7 @@ downloads:
       date: "2015.11.30"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
 
@@ -324,6 +371,7 @@ downloads:
       date: "2016.05.11"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.3.6"
@@ -331,6 +379,7 @@ downloads:
       date: "2016.05.03"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.3.5"
@@ -338,6 +387,7 @@ downloads:
       date: "2015.12.22"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.3.4"
@@ -345,6 +395,7 @@ downloads:
       date: "2015.12.15"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.3.3"
@@ -352,6 +403,7 @@ downloads:
       date: "2015.10.26"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.3.2"
@@ -359,6 +411,7 @@ downloads:
       date: "2015.07.01"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.3.1"
@@ -366,6 +419,7 @@ downloads:
       date: "2015.06.12"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.3.0"
@@ -373,6 +427,7 @@ downloads:
       date: "2015.05.28"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
 
@@ -383,6 +438,7 @@ downloads:
       date: "2016.06.14"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.2.9"
@@ -390,6 +446,7 @@ downloads:
       date: "2016.05.03"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.2.8"
@@ -397,6 +454,7 @@ downloads:
       date: "2016.01.28"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.2.7"
@@ -404,6 +462,7 @@ downloads:
       date: "2015.09.14"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.2.6"
@@ -411,6 +470,7 @@ downloads:
       date: "2015.08.11"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.2.5"
@@ -418,6 +478,7 @@ downloads:
       date: "2015.05.12"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.2.4"
@@ -425,6 +486,7 @@ downloads:
       date: "2015.03.25"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.2.3"
@@ -432,6 +494,7 @@ downloads:
       date: "2015.01.19"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.2.2"
@@ -439,6 +502,7 @@ downloads:
       date: "2015.01.14"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.2.1"
@@ -446,6 +510,7 @@ downloads:
       date: "2014.12.05"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
     - number: "7.2.0"
@@ -453,6 +518,7 @@ downloads:
       date: "2014.11.28"
       excludeservers:
       - "wildfly10"
+      - "wildfly11"
       - "ibm-was9"
 
 
