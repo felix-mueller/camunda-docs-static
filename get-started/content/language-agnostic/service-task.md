@@ -66,6 +66,7 @@ Finally, check the box of the *Executable* property. If you do not check this bo
 
 When you are done, save your changes by clicking *File > Save File As..* or using the *Save Button*. In the dialogue that pops up, navigate to any folder and save the diagram as e.g. `payment.bpmn`.
 
+{{< get-tag repo="camunda-get-started-language-agnostic" tag="Step-1" >}}
 
 # Implement an external task worker
 
@@ -167,7 +168,7 @@ You can run the Java application by right clicking on the class `ProcessRequest`
 Once your worker is running, you can [continue to deploy your process and start some instances](nextpage).
 {{< /note >}}
 
-{{< get-tag rexepo="camunda-get-started-language-agnostic" tag="2-Service-Task-Java" >}}
+{{< get-tag rexepo="camunda-get-started-language-agnostic" tag="Step-2a" >}}
 
 ## b) Using NodeJS
 
@@ -241,4 +242,4 @@ npm run ./worker.js
 Once your worker is running, you can [continue to deploy your process and start some instances](nextpage).
 {{< /note >}}
 
-{{< get-tag repo="camunda-get-started-language-agnostic" tag="2-Service-Task-JS" >}}
+{{< get-tag repo="camunda-get-started-language-agnostic" tag="Step-2b" >}}

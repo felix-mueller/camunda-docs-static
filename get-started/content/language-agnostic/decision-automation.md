@@ -74,3 +74,6 @@ You can also verify that the DMN tables were evaluated by using the Cockpit. Go 
 {{< note title="Success!" class="info" >}}
 You have successfully completed the Getting Started Guide. CTA?
 {{< /note >}}
+
+
+{{< get-tag repo="camunda-get-started-language-agnostic" tag="Step-5" >}}

@@ -93,4 +93,4 @@ To work on the task, select the *Form* tab. Because we have defined the variable
 Seems like you are ready for Decision Automation. Let's have a look how you can [add Business Rules to your Process](xx).
 {{< /note >}}
 
-{{< get-tag repo="camunda-get-started-language-agnostic" tag="1-Executable-Model" >}}
+{{< get-tag repo="camunda-get-started-language-agnostic" tag="Step-3" >}}
