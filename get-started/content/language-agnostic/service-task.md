@@ -8,7 +8,7 @@ menu:
     name: "Executable Process"
     parent: "get-started-language-agnostic"
     identifier: "get-started-language-agnostic-java-service-task"
-    pre: "Executing automated steps in the Process."
+    pre: "Learn the basics of handling the Camunda Modeler, learn how to model and configure a fully executable process and learn how to integrate your own business logic."
 
 ---
 
@@ -107,7 +107,7 @@ Your pom.xml file of your project should look like this:
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.camunda.bpm.getstarted</groupId>
-	<artifactId>loan-approval</artifactId>
+	<artifactId>charge-card-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<dependencies>
@@ -122,15 +122,15 @@ Your pom.xml file of your project should look like this:
 
 ### Add the Java class
 
-Next, we will create a new ExternalTaskClient which subscribes to the `processRequest` topic.
+Next, we will create a new ExternalTaskClient which subscribes to the `charge-card` topic.
 
 When the process engine encounters a service task that is configured to be externally handled, it creates an external task instance on which our handler will react.
 We are using [Long Polling](https://docs.camunda.org/manual/latest/user-guide/process-engine/external-tasks/#long-polling-to-fetch-and-lock-external-tasks) in the ExternalTaskClient to make the communication more efficient.
 
-To do so, you need to create a package, e.g., org.camunda.bpm.getstarted.loanapproval and add a Java class, e.g. ProcessRequest, to it.
+To do so, you need to create a package, e.g., org.camunda.bpm.getstarted.chargecard and add a Java class, e.g. ProcessRequest, to it.
 
 ```java
-  package org.camunda.bpm.getstarted.loanapproval;
+  package org.camunda.bpm.getstarted.chargecard;
 
   import java.util.logging.Logger;
 
@@ -148,8 +148,9 @@ To do so, you need to create a package, e.g., org.camunda.bpm.getstarted.loanapp
           // Put your business logic here
 
           // Get a process variable
-          String customerId = (String) externalTask.getVariable("customerId");
-          LOGGER.info("Processing request by '" + execution.getVariable("customerId") + "'...");
+          String item = (String) externalTask.getVariable("item");
+          Integer amount = (Integer) externalTask.getVariable("amount");
+          LOGGER.info("Charging credit card with an amount of '" + amount + "'€ for the item '" + item + "'...");
 
           // Complete the task
           externalTaskService.complete(externalTask);
@@ -182,9 +183,9 @@ Make sure you have the following set of tools installed:
 ### Create a new NodeJS project
 
 ```sh
-mkdir process-request-worker
-cd ./process-request-worker
-npm init process-request-worker -y
+mkdir charge-card-worker
+cd ./charge-card-worker
+npm init charge-card-worker -y
 ```
 
 ### Add Camunda External Task Client JS library
@@ -195,7 +196,7 @@ npm install -s camunda-external-task-client-js
 
 ### Implement the NodeJS script
 
-Next, we will create a new ExternalTaskClient which subscribes to the `processRequest` topic.
+Next, we will create a new ExternalTaskClient which subscribes to the `charge-card` topic.
 
 When the process engine encounters a service task that is configured to be externally handled, it creates an external task instance on which our handler will react.
 We are using [Long Polling](https://docs.camunda.org/manual/latest/user-guide/process-engine/external-tasks/#long-polling-to-fetch-and-lock-external-tasks) in the ExternalTaskClient to make the communication more efficient.
@@ -219,9 +220,10 @@ client.subscribe('charge-card', async function({ task, taskService }) {
   // Put your business logic here
 
   // Get a process variable
-  const customerId = task.variables.get('customerId');
+  const amount = task.variables.get('amount');
+  const item = task.variables.get('item');
 
-  console.log(`Processing request by ${customerId} ... `);
+  console.log(`Charging credit card with an amount of ${amount}€ for the item '${item}'...`);
 
   // Complete the task
   await taskService.complete(task);

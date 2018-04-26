@@ -8,7 +8,7 @@ menu:
     name: "Deploy the Process"
     parent: "get-started-language-agnostic"
     identifier: "get-started-language-agnostic-deploy"
-    pre: "Deploy the Process to Camunda. Test the BPMN 2.0 Process with Tasklist and Cockpit."
+    pre: "Deploy the Process to Camunda and start process instances."
 
 ---
 

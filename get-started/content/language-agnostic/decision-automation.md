@@ -1,14 +1,14 @@
 ---
 
 title: 'Leverage business rules.'
-weight: 70
+weight: 60
 
 menu:
   main:
     name: "Decision Automation"
     parent: "get-started-language-agnostic"
     identifier: "get-started-language-agnostic-decision-automation"
-    pre: "Integrating business rules in the Process."
+    pre: "Learn how to integrate DMN decision tables in the Process."
 
 ---
 

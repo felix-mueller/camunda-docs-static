@@ -1,14 +1,14 @@
 ---
 
 title: 'Add Gateways to the Process'
-weight: 40
+weight: 50
 
 menu:
   main:
     name: "Make it dynamic"
     parent: "get-started-language-agnostic"
     identifier: "get-started-language-agnostic-gateway"
-    pre: "Learn the basics of handling the Camunda Modeler and learn how to model and configure a fully executable process."
+    pre: "Learn how to make your process more dynamic by adding Gateways to the Process."
 
 ---
 

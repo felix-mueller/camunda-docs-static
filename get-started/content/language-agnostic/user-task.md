@@ -8,7 +8,7 @@ menu:
     name: "Involve Humans"
     parent: "get-started-language-agnostic"
     identifier: "get-started-language-agnostic-model"
-    pre: "Learn the basics of handling the Camunda Modeler and learn how to model and configure a fully executable process."
+    pre: "Learn the basics of integrating user tasks into a Process and how to build forms with Camunda."
 
 ---
 
