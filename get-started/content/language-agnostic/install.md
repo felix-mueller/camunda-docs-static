@@ -17,10 +17,15 @@ First you need to set up your development environment and install the Camunda BP
 
 # Prerequisites
 
-Make sure you have the following set of tools installed:
+Make sure you have the following installed:
 
-* Java JDK 1.8,
-* A modern web browser (recent Firefox, Chrome, Microsoft Edge or Internet Explorer 11 will work fine) <-- do we need this?
+* Java Runtime Environment 1.7+
+
+You can verify this by using your terminal, shell or command line:
+
+```sh
+java -version
+```
 
 
 # Camunda BPM Platform
@@ -33,10 +38,6 @@ After you have successfully unpacked your distribution of the Camunda BPM platfo
 
 This script will start the application server and open a welcome screen in your web browser. If the page does not open, go to [http://localhost:8080/camunda-welcome/index.html](http://localhost:8080/camunda-welcome/index.html).
 
-{{< note title="Getting Help" class="info" >}}
-If you have trouble setting up the Camunda BPM platform, you can ask for assistance in the [Camunda Users Forum](https://camunda.org/community/forum.html).
-{{< /note >}}
-
 
 # Camunda Modeler
 
@@ -45,3 +46,7 @@ Download the Camunda Modeler from [the download page](https://camunda.com/downlo
 After having downloaded the modeler, just unzip the download in a folder of your choice.
 
 After you have successfully unpacked the zip, run `camunda-modeler.exe` (for Windows users), respectively `camunda-modeler.app` (for Mac users) or `camunda-modeler.sh` (for Linux users).
+
+{{< note title="Next Step" class="info" >}}
+Once you have installed the Camunda Platform and the Camunda Modeler, you can continue to [model and execute your first process](next).
+{{< /note >}}

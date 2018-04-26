@@ -6,9 +6,9 @@ weight: 1
 
 menu:
   main:
-    name: "Workflow"
+    name: "Language Agnostic"
     identifier: "get-started-language-agnostic"
-    pre: "Learn how to model a BPMN 2.0 process using the Camunda Modeler, add a Java Class and HTML Forms. Package it as a web application and deploy it to an Apache Tomcat Server."
+    pre: "Learn how to model a BPMN 2.0 process using the Camunda Modeler, adding a Java or JavaScript Worker. Deploy it to the Camunda BPM Platform."
 
 ---
 

@@ -5,14 +5,14 @@ weight: 30
 
 menu:
   main:
-    name: "Deploy"
+    name: "Deploy the Process"
     parent: "get-started-language-agnostic"
     identifier: "get-started-language-agnostic-deploy"
     pre: "Deploy the Process to Camunda. Test the BPMN 2.0 Process with Tasklist and Cockpit."
 
 ---
 
-The next step consists of deploying the Process and starting a new instance using the Camunda Tasklist.
+The next step consists of deploying the Process and starting a new instance to see that your simple process is working correctly.
 
 # Use the Camunda Modeler for Deploying the Process
 
@@ -26,39 +26,37 @@ You should see a success message in the Camunda Modeler:
 
 Now use Cockpit to check if the process is successfully deployed. Go to [http://localhost:8080/camunda/app/cockpit](http://localhost:8080/camunda/app/cockpit). Log in with demo / demo. Your process *Loan Approval* is visible on the dashboard.
 
-{{< img src="../img/cockpit-loan-approval.png" >}}
+{{< img src="../img/cockpit-payment-retrieval.png" >}}
 
 
 # Start a Process Instance
 
-Next, go to Camunda Tasklist ([http://localhost:8080/camunda/app/tasklist](http://localhost:8080/camunda/app/tasklist)). Click on the {{< glyphicon name="list-alt" text=" Start process" >}} button to start a process instance. This opens a dialog where you can select *Loan Approval* from the list. Now you can set variables for the process instance using a generic form.
+In Camunda there are different ways of starting new process instances.
+You can leverage the Camunda REST API to start a new process instance by sending a POST Request.
 
-{{< img src="../img/start-form-generic.png" >}}
+## a) curl / wget
 
-The generic form can be used whenever you have not added a dedicated form for a User Task or a Start Event.
-Click on the *Add a variable* button to get a new row. Fill in the form as shown in the screenshot. When you are done, click *Start*.
+```sh
+curl -H "Content-Type: application/json" -X POST -d '{"variables": {"amount": {"value":555}, "item": {"value":"xyz"} } }' http://localhost:8080/engine-rest/process-definition/key/payment-retrieval/start
+```
 
-If you now go back to [Camunda Cockpit](http://localhost:8080/camunda/app/cockpit), you see the newly created process instance that is waiting in the User Task.
+In your worker you should now see the output in your console.
+This means you have successfully started and executed your first simple process.
 
-# Configure Process Start Authorizations
+## b) Rest Client
 
-To allow the user *john* to see the process definition *Loan Approval*, you have to go to Camunda Admin ([http://localhost:8080/camunda/app/admin/default/#/authorization?resource=6](http://localhost:8080/camunda/app/admin/default/#/authorization?resource=6)). Next, click on the button *Create new authorization* to add a new authorization on the resource *process definition*. Now you can give the user *john* all permissions on process definition *approve-loan*. When you are done, submit the new authorization.
+If you don't feel comfortable using curl or wget for the REST request, you can also make use of any Rest Client.
 
-{{< img src="../img/create-process-definition-authorization.png" >}}
+In Postman the request could look like this:
+<picture<
 
-Now create a second authorization for the *process instance* resource. Set the permission to *CREATE*.
+In your worker you should now see the output in your console.
+This means you have successfully started and executed your first simple process.
 
-{{< img src="../img/create-process-instance-authorization.png" >}}
+{{< note title="Hint" class="info" >}}
+If you are running on Camunda Enterprise Edition, you can also check out your completed process instance in the Camunda Cockpit.
+{{< /note >}}
 
-For further details about authorizations and how to manage them, please read the following sections in the user guide: [Authorization Service](/manual/latest/user-guide/process-engine/authorization-service) and [Authorization Management](/manual/latest/webapps/admin/authorization-management).
-
-
-# Work on the Task
-
-Log out of Admin. Go to Tasklist ([http://localhost:8080/camunda/app/tasklist](http://localhost:8080/camunda/app/tasklist)) and log back in with the user credentials "john / john". Now you see the *Approve Loan* task in your Tasklist. Select the task and click on the *Diagram* tab. This displays the process diagram highlighting the User Task that is waiting for you to work on it.
-
-{{< img src="../img/diagram.png" >}}
-
-To work on the task, select the *Form* tab. Again, there is no task form associated with the process. Click on *Load Variables*. This displays the variables you have put in in the first step.
-
-{{< img src="../img/task-form-generic.png" >}}
+{{< note title="Next Step" class="info" >}}
+It could be that in edge cases, we want to involve humans in our process, [continue to learn how you can involve humans in your process](nextpage).
+{{< /note >}}
