@@ -1,6 +1,6 @@
 ---
 
-title: 'Leverage business rules.'
+title: 'Leverage business rules'
 weight: 60
 
 menu:

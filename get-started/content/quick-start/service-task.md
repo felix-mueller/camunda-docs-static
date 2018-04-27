@@ -1,6 +1,6 @@
 ---
 
-title: 'Executing automated steps.'
+title: 'Executing automated steps'
 weight: 20
 
 menu:
@@ -43,7 +43,7 @@ Add an End Event named *Payment Received*.
 
 ## Configure the Service Task
 
-There are different ways of [executing service tasks](https://docs.camunda.org/manual/latest/user-guide/process-engine/external-tasks/) using Camunda BPM. In this guide we will make use of the External Task pattern.
+There are different ways of [executing service tasks](https://docs.camunda.org/manual/latest/user-guide/process-engine/external-tasks/) using Camunda BPM. In this guide we will make use of the external task pattern.
 Open the Properties Panel within the Camunda Modeler and click on the Service Task you just created. Change the Implementation to `External` and use `charge-card` as the Topic.
 
 {{< img src="../img/modeler-step4.png" >}}
@@ -171,7 +171,7 @@ public class ChargeCardWorker {
 You can run the Java application by right clicking on the class `ChargeCardWorker` and choose `Run as Java`.
 
 {{< note title="Next Step" class="info" >}}
-Once your worker is running, you can [continue to deploy your process and start some instances](nextpage).
+Once your worker is running, you can [continue to deploy your process and start some instances](/get-started/quick-start/deploy/).
 {{< /note >}}
 
 {{< get-tag rexepo="camunda-get-started-language-agnostic" tag="Step-2a" >}}
@@ -245,7 +245,7 @@ You can run the NodeJS script by using:
 npm run ./worker.js
 ```
 {{< note title="Next Step" class="info" >}}
-Once your worker is running, you can [continue to deploy your process and start some instances](nextpage).
+Once your worker is running, you can [continue to deploy your process and start some instances](/get-started/quick-start/deploy/).
 {{< /note >}}
 
 {{< get-tag repo="camunda-get-started-language-agnostic" tag="Step-2b" >}}

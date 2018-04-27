@@ -30,7 +30,7 @@ java -version
 
 # Camunda BPM Platform
 
-First, download a distribution of the Camunda BPM platform. You can choose from different distributions for various application servers. In this tutorial, we will use the Apache Tomcat based distribution. Download it from [the download page](https://camunda.com/download).
+First, download a distribution of the Camunda BPM platform. You can choose from different distributions for [various application servers](/manual/latest/installation/full/). In this tutorial, we will use the Apache Tomcat based distribution. Download it from [the download page](https://camunda.com/download).
 
 After having downloaded the distribution, unpack it inside a directory of your choice.
 
@@ -48,5 +48,5 @@ After having downloaded the modeler, just unzip the download in a folder of your
 After you have successfully unpacked the zip, run `camunda-modeler.exe` (for Windows users), respectively `camunda-modeler.app` (for Mac users) or `camunda-modeler.sh` (for Linux users).
 
 {{< note title="Next Step" class="info" >}}
-Once you have installed the Camunda Platform and the Camunda Modeler, you can continue to [model and execute your first process](/).
+Once you have installed the Camunda Platform and the Camunda Modeler, you can continue to [model and execute your first process](/get-started/quick-start/service-task/).
 {{< /note >}}

@@ -67,7 +67,7 @@ We should see that our worker prints something to the console.
 Next, repeat the same procedure and reject the payment. Also create one instance with an amount of less than 1000 to see that the first gateways works correctly.
 
 {{< note title="Next Step" class="info" >}}
-Seems like you are ready for Decision Automation. Let's have a look how you can [add Business Rules to your Process](xx).
+Seems like you are ready for Decision Automation. Let's have a look how you can [add Business Rules to your Process](/get-started/quick-start/decision-automation/).
 {{< /note >}}
 
 {{< get-tag repo="camunda-get-started-language-agnostic" tag="Step-4" >}}

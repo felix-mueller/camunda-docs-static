@@ -42,6 +42,8 @@ Click on the Tab `Forms` in the properties panel.
 
 Add three form fields by clicking on the `plus` button:
 
+{{< img src="../img/modeler-usertask-add.png" >}}
+
 Field 1:
 
   * ID: amount
@@ -90,7 +92,7 @@ To work on the task, select the *Form* tab. Because we have defined the variable
 {{< img src="../img/task-form-generated.png" >}}
 
 {{< note title="Next Step" class="info" >}}
-Seems like you are ready for Decision Automation. Let's have a look how you can [add Business Rules to your Process](xx).
+Now we should make the process more dynamic and only show a User Task in certain situations. Let's have a look how you can [add Gateways to your Process](/get-started/quick-start/gateway/).
 {{< /note >}}
 
 {{< get-tag repo="camunda-get-started-language-agnostic" tag="Step-3" >}}
