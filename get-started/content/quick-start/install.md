@@ -48,5 +48,5 @@ After having downloaded the modeler, just unzip the download in a folder of your
 After you have successfully unpacked the zip, run `camunda-modeler.exe` (for Windows users), respectively `camunda-modeler.app` (for Mac users) or `camunda-modeler.sh` (for Linux users).
 
 {{< note title="Next Step" class="info" >}}
-Once you have installed the Camunda Platform and the Camunda Modeler, you can continue to [model and execute your first process](next).
+Once you have installed the Camunda Platform and the Camunda Modeler, you can continue to [model and execute your first process](/).
 {{< /note >}}

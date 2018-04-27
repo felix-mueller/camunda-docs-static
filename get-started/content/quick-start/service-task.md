@@ -133,19 +133,22 @@ We are using [Long Polling](https://docs.camunda.org/manual/latest/user-guide/pr
 To do so, you need to create a package, e.g., *org.camunda.bpm.getstarted.chargecard* and add a Java class, e.g. *ChargeCardWorker*, to it.
 
 ```java
-  package org.camunda.bpm.getstarted.chargecard;
+package org.camunda.bpm.getstarted.chargecard;
 
-  import java.util.logging.Logger;
+import java.util.logging.Logger;
 
-  public class ChargeCardWorker {
+import org.camunda.bpm.client.ExternalTaskClient;
 
-    public static void main(String[] args) {
-      ExternalTaskClient client = ExternalTaskClient.create()
-          .baseUrl("http://localhost:8080/engine-rest")
-          .build();
+public class ChargeCardWorker {
+  private final static Logger LOGGER = Logger.getLogger(ChargeCardWorker.class.getName());
 
-      // subscribe to an external task topic as specified in the process
-      client.subscribe("charge-card")
+  public static void main(String[] args) {
+    ExternalTaskClient client = ExternalTaskClient.create()
+        .baseUrl("http://localhost:8080/engine-rest")
+        .build();
+
+    // subscribe to an external task topic as specified in the process
+    client.subscribe("charge-card")
         .lockDuration(1000) // the default lock duration is 20 seconds, but you can override this
         .handler((externalTask, externalTaskService) -> {
           // Put your business logic here
@@ -157,9 +160,10 @@ To do so, you need to create a package, e.g., *org.camunda.bpm.getstarted.charge
 
           // Complete the task
           externalTaskService.complete(externalTask);
-      }).open();
-    }
+        })
+        .open();
   }
+}
 ```
 
 ### Run the worker
@@ -207,7 +211,6 @@ We are using [Long Polling](https://docs.camunda.org/manual/latest/user-guide/pr
 To do so, you need to create a new JavaScript file, e.g. `worker.js`, that looks like this:
 
 ```javascript
-
 const { Client, logger } = require('camunda-external-task-client-js');
 
 // configuration for the Client:
@@ -231,6 +234,7 @@ client.subscribe('charge-card', async function({ task, taskService }) {
   // Complete the task
   await taskService.complete(task);
 });
+
 ```
 
 ### Run the NodeJS script
