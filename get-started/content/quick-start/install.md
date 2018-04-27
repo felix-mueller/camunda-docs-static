@@ -6,8 +6,8 @@ weight: 10
 menu:
   main:
     name: "Download and Installation"
-    parent: "get-started-language-agnostic"
-    identifier: "get-started-language-agnostic-install"
+    parent: "get-started-quick-start"
+    identifier: "get-started-quick-start-install"
     pre: "Install the Camunda BPM Platform and Camunda Modeler on your machine."
 
 ---

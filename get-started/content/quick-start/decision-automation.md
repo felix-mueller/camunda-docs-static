@@ -6,11 +6,13 @@ weight: 60
 menu:
   main:
     name: "Decision Automation"
-    parent: "get-started-language-agnostic"
-    identifier: "get-started-language-agnostic-decision-automation"
+    parent: "get-started-quick-start"
+    identifier: "get-started-quick-start-decision-automation"
     pre: "Learn how to integrate DMN decision tables in the Process."
 
 ---
+
+In this section you learn how to add decision automation to your process by using BPMN 2.0 *Business Rule Tasks* and DMN 1.1 Decision Tables.
 
 # Add a Business Rule Task to the Process
 Use the Camunda Modeler to open the Payment Retrieval process. Now click on the Approve Payment Task. Change the activity type to *Business Rule Task* by using the wrench button and clicking on it.
@@ -32,13 +34,13 @@ Create a new DMN table by clicking *File > New File > DMN Table*.
 First give the DMN table a Name Approve Payment and ID approve-payment. The ID has to match the Decision Ref in your BPMN process.
 {{< img src="../img/modeler-dmn1.png" >}}
 
-Next specify the input expressions for the DMN table. We will decide about the approval based on the item name:
+Next specify the input expressions for the DMN table. We will decide about the approval based on the item name. Your rules can also make use of the FEEL Expression Language, JUEL or Script. If you like, you can [read more about Expressions in the DMN Engine](/manual/latest/user-guide/dmn-engine/expressions-and-scripts/).
 {{< img src="../img/modeler-dmn2.png" >}}
 
-After the input, we also should define Name and Label for our Output Column Approved:
+After the input, we also should define *Name* and *Label* for our Output Column Approved:
 {{< img src="../img/modeler-dmn3.png" >}}
 
-Let's create some rules by click on the plus icon on the left side of the DMN table. Also we should change the Output Column to the Data Type `boolean`:
+Let's create some rules by clicking on the plus icon on the left side of the DMN table. Also we should change the Output Column to the Data Type `boolean`:
 {{< img src="../img/modeler-dmn4.png" >}}
 
 Now, your DMN table should look similar to this:
@@ -60,13 +62,13 @@ To do so, go to [http://localhost:8080/camunda/app/tasklist](http://localhost:80
 
 Click on the {{< glyphicon name="list-alt" text=" Start process" >}} button to start a process instance and choose the `Payment` process.
 Use the generic form to add the variables as follows:
-
+{{< img src="../img/tasklist-dmn1.png" >}}
 
 Hit the Start Instance button.
 
 Next, click again on the {{< glyphicon name="list-alt" text=" Start process" >}} button to start another process instance and choose the `Payment` process.
 Use the generic form to add the variables as follows:
-
+{{< img src="../img/tasklist-dmn2.png" >}}
 
 You will see that depending on your input your worker will charge the credit car or not.
 You can also verify that the DMN tables were evaluated by using the Cockpit. Go to [http://localhost:8080/camunda/app/cockpit](http://localhost:8080/camunda/app/cockpit). Log in with *demo / demo*. Go to "Decisions" section. Click on Approve Payment. Check the different Decision Instances that were evaluated by clicking on the ID in the table below the table.

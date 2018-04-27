@@ -6,8 +6,8 @@ weight: 40
 menu:
   main:
     name: "Involve Humans"
-    parent: "get-started-language-agnostic"
-    identifier: "get-started-language-agnostic-model"
+    parent: "get-started-quick-start"
+    identifier: "get-started-quick-start-model"
     pre: "Learn the basics of integrating user tasks into a Process and how to build forms with Camunda."
 
 ---
