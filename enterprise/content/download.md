@@ -51,6 +51,12 @@ downloads:
   branches:
   - branch: "7.9"
     releases:
+    - number: "7.9.0-alpha4"
+      note: "https://blog.camunda.org/post/2018/04/camunda-bpm-790-alpha4-released/"
+      date: "2018.04.27"
+      excludeservers:
+      - "glassfish"
+
     - number: "7.9.0-alpha3"
       note: "https://blog.camunda.com/post/2018/03/camunda-bpm-790-alpha3-released"
       date: "2018.03.29"
@@ -717,6 +723,26 @@ The Camunda Modeler is an open source process modeling tool based on [bpmn.io](h
     </tr>
   </thead>
   <tbody>
+    <tr class="well">
+      <td><a href="/optimize">Camunda Optimize</a></td>
+      <td>2.1.0-alpha1</td>
+      <td>Yes</td>
+      <td>27.04.2018</td>
+      <td>
+        <a class="btn btn-sm btn-default" href="https://camunda.org/enterprise-release/optimize/2.1.0-alpha1/camunda-optimize-2.1.0-alpha1-full.zip">zip</a>&nbsp;
+        <a class="btn btn-sm btn-default" href="https://camunda.org/enterprise-release/optimize/2.1.0-alpha1/camunda-optimize-2.1.0-alpha1-full.tar.gz">tar.gz</a>
+      </td>
+    </tr>
+    <tr class="well">
+      <td><a href="/optimize">Camunda Optimize</a></td>
+      <td>2.1.0-alpha1</td>
+      <td>No</td>
+      <td>27.04.2018</td>
+      <td>
+        <a class="btn btn-sm btn-default" href="https://camunda.org/enterprise-release/optimize/2.1.0-alpha1/camunda-optimize-2.1.0-alpha1-standalone.zip">zip</a>&nbsp;
+        <a class="btn btn-sm btn-default" href="https://camunda.org/enterprise-release/optimize/2.1.0-alpha1/camunda-optimize-2.1.0-alpha1-standalone.tar.gz">tar.gz</a>
+      </td>
+    </tr>
     <tr class="well">
       <td><a href="/optimize">Camunda Optimize</a></td>
       <td>2.0.0</td>
